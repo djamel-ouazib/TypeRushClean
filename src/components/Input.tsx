@@ -20,7 +20,8 @@ const countWords = (text: string): number => {
 
   // Timer
   useEffect(() => {
-    let interval: NodeJS.Timer;
+    let interval: ReturnType<typeof setInterval>;
+
     if (isRunning) {
       interval = setInterval(() => setTimer(prev => prev + 1), 1000);
     }

@@ -5,7 +5,7 @@ function Cursor() {
   const [position, setPosition] = useState(0);
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       // Si la touche est une lettre, un chiffre ou un espace, on bouge le curseur
       if (e.key.length === 1) {
         setPosition((prev) => prev + 10); // 10px est plus réaliste
